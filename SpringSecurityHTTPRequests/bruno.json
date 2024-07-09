@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "SpringSecurityHTTPRequests",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

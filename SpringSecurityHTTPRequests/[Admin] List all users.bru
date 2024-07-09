@@ -1,0 +1,29 @@
+meta {
+  name: [Admin] List all users
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:8080/users
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+    "username": "lua",
+    "password": "456"
+  }
+}
+
+docs {
+  {
+  	"username": "lua",
+  	"password": "456"
+  }
+}
