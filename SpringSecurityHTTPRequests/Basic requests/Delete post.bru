@@ -1,0 +1,22 @@
+meta {
+  name: Delete post
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:8080/tweets/203
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+docs {
+  {
+  	"username": "lua",
+  	"password": "456"
+  }
+}
