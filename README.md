@@ -44,15 +44,24 @@ Configure the credentials and the database URL in the `application.properties` f
     cd spring-security-example
     ```
 
-2. **Configure the database**:
+2. **Configure the database**:<br>
     Update the `src/main/resources/application.properties` file with your database configuration.
+   
+3. **In `cd src/main/java/resources` Generate your private key**:
+    ```
+    openssl genrsa
+    ```
+4. **Derive your public key**
+    ```
+    openssl rsa -in private.pem -pubout -out public.pem
+    ```
 
-3. **Build the project**:
+5. **In your project directory Build the project**:
     ```
     mvn clean install
     ```
 
-4. **Run the application**:
+6. **Run the application**:
     ```
     mvn spring-boot:run
     ```
